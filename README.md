@@ -1,4 +1,4 @@
-sticky
+Sticky
 ======
 
 Yet another `position: sticky` jQuery plugin.
@@ -16,4 +16,7 @@ And when you're done:
 $('whatever').sticky('destory')
 ```
 
-:+1:
+Compatibility
+-------------
+
+Works on all major browsers jQuery supports. Sticky also requires `requestAnimationFrame` to work properly, so you might need a [polyfill](http://paulirish.com/2011/requestanimationframe-for-smart-animating/) for older browsers.
