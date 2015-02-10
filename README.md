@@ -7,13 +7,19 @@ Usage
 -----
 
 ```js
-$('whatever').sticky()
+$('.whatever').sticky()
+```
+
+If you need to manually update the position:
+
+```js
+$('.whatever').sticky('update')
 ```
 
 And when you're done:
 
 ```js
-$('whatever').sticky('destory')
+$('.whatever').sticky('destory')
 ```
 
 Compatibility
