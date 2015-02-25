@@ -171,7 +171,7 @@
 			$(window).off('load resize scroll touchmove', this.update);
 
 			// Remove from jQuery
-			$.removeData(element, 'sticky');
+			element.removeData('sticky');
 		}
 	};
 
@@ -184,11 +184,13 @@
 				if (typeof options == 'string') {
 					var instance = element.data('sticky');
 
+					console.log(instance);
+
 					if (instance instanceof Sticky && $.isFunction(instance[options])) {
 						instance[options]();
 					}
 				} else {
-					$.data(element, 'sticky', new Sticky(element));
+					element.data('sticky', new Sticky(element));
 				}
 			});
 		}
