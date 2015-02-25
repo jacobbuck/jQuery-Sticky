@@ -1,0 +1,29 @@
+{
+  "name": "sticky",
+  "version": "1.0.0",
+  "homepage": "https://github.com/jacobbuck/sticky",
+  "authors": [
+    "Jacob Buck <buck.jacob@gmail.com>"
+  ],
+  "description": "Yet another position: sticky jQuery plugin",
+  "main": "jquery.sticky.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "jquery",
+    "position",
+    "sticky"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "*"
+  }
+}
