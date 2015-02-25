@@ -101,7 +101,7 @@
 				// Stick our element if it isn't already
 				if (!this.stuck) {
 					this.stuck = true;
-					element.addClass(STUCK_CLASSNAME).trigger('stuck');
+					element.addClass(STUCK_CLASSNAME).trigger('stick');
 					elementCSS.position = 'fixed';
 				}
 
@@ -154,7 +154,7 @@
 				left: ''
 			})
 			.removeClass(STUCK_CLASSNAME)
-			.trigger('unstuck');
+			.trigger('unstick');
 		},
 
 		destroy: function () {
