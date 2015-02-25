@@ -181,7 +181,7 @@
 			return this.each(function () {
 				var element = $(this);
 
-				if ($.isString(options)) {
+				if (typeof options == 'string') {
 					var instance = element.data('sticky');
 
 					if (instance instanceof Sticky && $.isFunction(instance[options])) {
