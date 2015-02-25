@@ -169,29 +169,26 @@
 
 			// Unbind events
 			$(window).off('load resize scroll touchmove', this.update);
+
+			// Remove from jQuery
+			$.removeData(element, 'sticky');
 		}
 	};
 
-	// Hey, it's our jQuery plugin.
+	// Simple jQuery bridge
 	$.fn.extend({
-		sticky: function (target, options) {
-			target = $(target);
-
+		sticky: function (options) {
 			return this.each(function () {
 				var element = $(this);
-				var instance = element.data('sticky');
 
-				if (instance instanceof Sticky) {
-					if ($.isFunction(instance[target])) {
-						instance[target](options);
+				if ($.isString(options)) {
+					var instance = element.data('sticky');
 
-						// Remove stored instance
-						if ('destroy' == target) {
-							element.removeData('sticky');
-						}
+					if (instance instanceof Sticky && $.isFunction(instance[options])) {
+						instance[options]();
 					}
 				} else {
-					element.data('sticky', new Sticky(element));
+					$.data(element, 'sticky', new Sticky(element));
 				}
 			});
 		}
